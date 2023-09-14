@@ -24,6 +24,7 @@
     <ProjectGuid>{2e5d54b3-1433-482f-9101-a2beda3a0ea7}</ProjectGuid>
     <RootNamespace>internaltf2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Cheathack</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
