@@ -1385,7 +1385,7 @@ void c_menu::run() {
 		static std::string name = "";
 
 		if (name.empty()) {
-			name = "spook953paste v3";
+			name = "Cheathack";
 			name += ctx->m_user_name;
 		}
 
