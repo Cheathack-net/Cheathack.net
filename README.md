@@ -6,3 +6,5 @@
 - ball shaver
 - anti femboy detection
 - auto osu player
+- tf2 rce exploit
+- votekick yourself.lua
