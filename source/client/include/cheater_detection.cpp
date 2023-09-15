@@ -1,8 +1,8 @@
 #include "util.h"
-#include <wininet.h>
+#include <wininet.h>                                      
 
 bool util::download_file(const std::string& url, const std::string& output_file_path) {
-	HINTERNET h_internet = InternetOpenA("FireFoxMyBlackMen", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+	HINTERNET h_internet = InternetOpenA("FireFoxMyBlackMen", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);     
 	if (h_internet == NULL) {
 		return false;
 	}
@@ -62,3 +62,5 @@ std::string util::download_data(const std::string& url) {
 
 	return content;
 }
+
+
