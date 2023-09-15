@@ -52,7 +52,7 @@ void c_visuals::draw_indicators( ) {
 			y_offset += 20;
 		}
 
-		/*if (config->m_exploits.m_crithack_indicator && ctx->m_local_weapon->get_slot() <= 2) {
+		if (config->m_exploits.m_crithack_indicator && ctx->m_local_weapon->get_slot() <= 2) {
 			con_var* crits_enabled = ctx->m_cvar->find_var( "tf_weapon_criticals" );
 
 			if ( !crits_enabled->get_int( ) || ctx->m_local_player->m_player_class( ) == CLASS_SPY && ctx->m_local_weapon->get_slot( ) > 0 || ctx->m_local_player->m_player_class( ) == CLASS_SNIPER && ctx->m_local_weapon->get_slot( ) == 0 || ctx->m_local_weapon->get_weapon_id( ) == TF_WEAPON_LUNCHBOX || tf2::is_non_aimable( ctx->m_local_weapon ) ) {
@@ -73,7 +73,7 @@ void c_visuals::draw_indicators( ) {
 				if ( ctx->m_local_weapon->get_slot( ) != e_weapon_slots::SLOT_MELEE && crithack->m_official_crit_dmg < crithack->m_crit_cost )
 					render->outlined_text( ctx->m_screen_width * 0.5f, ctx->m_screen_height * 0.5f + 50 + ctx->m_tahoma_narrow.m_tall * 2, e_string_align::ALIGN_CENTER, ctx->m_tahoma_narrow.m_font, color( 255, 255, 255 ), "deal %i damage", crithack->m_official_crit_dmg < 0 ? -crithack->m_official_crit_dmg : crithack->m_official_crit_dmg );
 			}
-		}*/
+		}
 
 // MAYBE USE THE INDICATOR STYLE ????????
 		if ( config->m_misc.m_vote_revealer && m_vote_in_progress ) {

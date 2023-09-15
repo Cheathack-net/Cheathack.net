@@ -39,9 +39,6 @@
     <Filter Include="Source\client\Features\misc\seed_prediction">
       <UniqueIdentifier>{4d05c1d4-d2f5-4334-92e5-7f92358874fa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\client\Features\aimbot\hitscam">
-      <UniqueIdentifier>{3eb7583d-fa49-4faf-9a61-8d40317c0849}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\client\Features\aimbot\projectile">
       <UniqueIdentifier>{503f8e62-34a5-4d88-8831-5ac769ea6896}</UniqueIdentifier>
     </Filter>
@@ -92,6 +89,9 @@
     </Filter>
     <Filter Include="Source\client\hooks\minhook\hde">
       <UniqueIdentifier>{2d92fe10-e6c0-4130-9992-929fba6cdfaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\client\Features\aimbot\hitscan">
+      <UniqueIdentifier>{3eb7583d-fa49-4faf-9a61-8d40317c0849}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +150,7 @@
       <Filter>Source\client\Features\misc\seed_prediction</Filter>
     </ClCompile>
     <ClCompile Include="source\client\features\hitscan\hitscan.cpp">
-      <Filter>Source\client\Features\aimbot\hitscam</Filter>
+      <Filter>Source\client\Features\aimbot\hitscan</Filter>
     </ClCompile>
     <ClCompile Include="source\client\features\game_events\game_events.cpp">
       <Filter>Source\client\Features\misc\game_events</Filter>
@@ -257,7 +257,7 @@
       <Filter>Source\client\Features\misc\seed_prediction</Filter>
     </ClInclude>
     <ClInclude Include="source\client\features\hitscan\hitscan.h">
-      <Filter>Source\client\Features\aimbot\hitscam</Filter>
+      <Filter>Source\client\Features\aimbot\hitscan</Filter>
     </ClInclude>
     <ClInclude Include="source\client\features\game_events\game_events.h">
       <Filter>Source\client\Features\misc\game_events</Filter>

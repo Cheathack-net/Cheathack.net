@@ -819,7 +819,7 @@ void c_menu::disable_clipping() {
 }
 
 void c_menu::save_config() {
-	std::ofstream output("figgy.jenga");
+	std::ofstream output("cfg.Cheathack");
 
 	if (output.is_open()) {
 		Json::Value Save;
