@@ -188,7 +188,6 @@
     <ClCompile Include="source\client\include\entities.cpp" />
     <ClCompile Include="source\client\include\json.cpp" />
     <ClCompile Include="source\client\include\netvar_manager.cpp" />
-    <ClCompile Include="source\client\include\send_webhook.cpp" />
     <ClCompile Include="source\main_thread.cpp" />
     <ClCompile Include="source\client\include\tf2.cpp" />
   </ItemGroup>

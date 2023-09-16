@@ -131,9 +131,6 @@
     <ClCompile Include="source\client\include\netvar_manager.cpp">
       <Filter>Source\client\include</Filter>
     </ClCompile>
-    <ClCompile Include="source\client\include\send_webhook.cpp">
-      <Filter>Source\client\include</Filter>
-    </ClCompile>
     <ClCompile Include="source\client\include\tf2.cpp">
       <Filter>Source\client\include</Filter>
     </ClCompile>
