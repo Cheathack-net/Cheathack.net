@@ -125,8 +125,8 @@ void c_game_events::fire_game_event(c_game_event* event) {
 			std::string cheater = red + "CHEATER" + gray;
 			std::string name = blue + pi.m_name + white;
 			std::string guid = blue + pi.m_guid + white;
-			std::string connect = gray + "[" + menu_accent + "spook953paste" + gray + "]  [" + team + "] " + name + " has joined. [" + guid + "]";
-			std::string cheaterdetection = gray + "[" + menu_accent + "spook953paste" + gray + "] " + name + "is a known " + cheater + "!";
+			std::string connect = gray + "[" + menu_accent + "Cheathack" + gray + "]  [" + team + "] " + name + " has joined. [" + guid + "]";
+			std::string cheaterdetection = gray + "[" + menu_accent + "Cheathack" + gray + "] " + name + "is a known " + cheater + "!";
 
 			ctx->m_client_mode->m_chat_element->chat_printf(0, connect.c_str());
 
@@ -141,7 +141,7 @@ void c_game_events::fire_game_event(c_game_event* event) {
 			//std::string team = player->m_team_num( ) != ctx->m_local_player->m_team_num( ) ? white + "ENEMY" + gray : white + "TEAM" + gray;
 			std::string name = blue + event->get_string("name") + white;
 			//std::string guid = blue + pi.m_guid + white;
-			std::string disconnect = gray + "[" + menu_accent + "spook953paste" + gray + "] " + name + " has left.";
+			std::string disconnect = gray + "[" + menu_accent + "Cheathack" + gray + "] " + name + " has left.";
 
 			ctx->m_client_mode->m_chat_element->chat_printf(0, disconnect.c_str());
 		}
@@ -161,7 +161,7 @@ void c_game_events::fire_game_event(c_game_event* event) {
 			std::string team = player->m_team_num() != ctx->m_local_player->m_team_num() ? white + "ENEMY" + gray : white + "TEAM" + gray;
 			std::string name = blue + pi.m_name + white;
 			std::string class_str = blue + tf2::get_player_class(event->get_int("class")) + white;
-			std::string class_change = gray + "[" + menu_accent + "spook953paste" + gray + "]  [" + team + "] " + name + " changed class to " + class_str + ".";
+			std::string class_change = gray + "[" + menu_accent + "Cheathack" + gray + "]  [" + team + "] " + name + " changed class to " + class_str + ".";
 
 			ctx->m_client_mode->m_chat_element->chat_printf(0, class_change.c_str());
 		}
@@ -177,7 +177,7 @@ void c_game_events::fire_game_event(c_game_event* event) {
 			std::string old_name = blue + event->get_string("oldname") + white;
 			std::string new_name = blue + event->get_string("newname") + white;
 			std::string team = player->m_team_num() != ctx->m_local_player->m_team_num() ? white + "ENEMY" + gray : white + "TEAM" + gray;
-			std::string name_change = gray + "[" + menu_accent + "spook953paste" + gray + "]  [" + team + "] " + old_name + " changed name to " + new_name + ".";
+			std::string name_change = gray + "[" + menu_accent + "Cheathack" + gray + "]  [" + team + "] " + old_name + " changed name to " + new_name + ".";
 
 			ctx->m_client_mode->m_chat_element->chat_printf(0, name_change.c_str());
 		}
@@ -199,7 +199,7 @@ void c_game_events::fire_game_event(c_game_event* event) {
 			std::string name = blue + pi.m_name + white;
 			std::string vote = voted_yes ? green + "Yes" + white : red + "No" + white;
 
-			std::string vote_str = gray + "[" + menu_accent + "spook953paste" + gray + "]  [" + team + "] " + name + " voted " + vote + ".";
+			std::string vote_str = gray + "[" + menu_accent + "Cheathack" + gray + "]  [" + team + "] " + name + " voted " + vote + ".";
 			ctx->m_client_mode->m_chat_element->chat_printf(0, vote_str.c_str());
 		}
 	}
