@@ -10,35 +10,38 @@
 static std::string m_vote_target = "temp";
 static std::string m_vote_caller = "temp";
 
-void c_visuals::draw_indicators( ) {
-	if ( !ctx->m_local_player || !ctx->m_local_player->is_alive( ) || !ctx->m_local_weapon )
+void c_visuals::draw_indicators() {
+	if (!ctx->m_local_player || !ctx->m_local_player->is_alive() || !ctx->m_local_weapon)
 		return;
 
-	if ( ctx->m_engine_vgui->is_game_ui_visible( ) )
+	if (ctx->m_engine_vgui->is_game_ui_visible())
 		return;
 
 	auto indicator_amount = 0;
 
-	if ( config->m_exploits.m_doubletap_indicator )
+	if (config->m_exploits.m_doubletap_indicator)
 		indicator_amount++;
 
 #ifndef JW_RELEASE_BUILD
-	if ( config->m_seed_pred.m_draw_indicator )
+	if (config->m_seed_pred.m_draw_indicator)
 		indicator_amount++;
 #endif
 
-	auto height_to_deduct = ( indicator_amount * ( ctx->m_tahoma_narrow.m_tall + 20 ) ) * 0.5f;
+	auto height_to_deduct = (indicator_amount * (ctx->m_tahoma_narrow.m_tall + 20)) * 0.5f;
 
-	ctx->m_surface->draw_set_alpha( 0.7f ); {
+	ctx->m_surface->draw_set_alpha(0.7f); {
 		auto y_offset = ctx->m_screen_height * 0.5f - height_to_deduct;
 
-		if ( config->m_exploits.m_doubletap_indicator ) {
-			int ticks = config->m_hvh.m_fakelag && ctx->m_charged_ticks <= 0 ? ctx->m_client_state->m_choked_commands : ctx->m_charged_ticks;
+		if (config->m_exploits.m_doubletap_indicator) {
+			int ticks = config->m_hvh.m_fakelag && ctx->m_charged_ticks <= 0
+				? ctx->m_client_state->m_choked_commands
+				: ctx->m_charged_ticks;
 
-			render->outlined_text( 37, y_offset, e_string_align::ALIGN_DEFAULT, ctx->m_tahoma_narrow.m_font, color( 255, 255, 255 ), "ticks: %i (%.2fs)", ticks, TICKS_TO_TIME( ctx->m_charged_ticks ) );
+			render->outlined_text(37, y_offset, e_string_align::ALIGN_DEFAULT, ctx->m_tahoma_narrow.m_font,
+				color(255, 255, 255), "ticks: %i (%.2fs)", ticks, TICKS_TO_TIME(ctx->m_charged_ticks));
 			y_offset += ctx->m_tahoma_narrow.m_tall;
 
-			render->filled_rect( 35, y_offset, 125, 10, config->m_colors.m_ui_background );
+			render->filled_rect(35, y_offset, 125, 10, color(0, 0, 0)); // Background color (black)
 			float max_ticks = 22.f;
 
 			if (ctx->m_local_player->m_player_class() == CLASS_SCOUT)
@@ -47,10 +50,19 @@ void c_visuals::draw_indicators( ) {
 			if (config->m_misc.m_reduce_input_delay)
 				max_ticks = 20.f;
 
-			render->gradient_rect( 35, y_offset, math::remap_val_clamped( ticks, 0.0f, max_ticks, 0.0f, 125.0f ), 10, config->m_colors.m_ui_foreground, config->m_colors.m_ui_accent, true );
-			render->outlined_rect( 35, y_offset, 125, 10, config->m_colors.m_ui_outline );
+			// Gradient colors (replace with your RGB values)
+			color foreground_color(0, 0, 0);
+			color accent_color(66, 135, 245);
+
+			render->gradient_rect(35, y_offset, math::remap_val_clamped(ticks, 0.0f, max_ticks, 0.0f, 125.0f), 10,
+				foreground_color, accent_color, true);
+
+			// Outline color (replace with your RGB value)
+			render->outlined_rect(35, y_offset, 125, 10, color(0, 0, 0));
+
 			y_offset += 20;
 		}
+
 
 		if (config->m_exploits.m_crithack_indicator && ctx->m_local_weapon->get_slot() <= 2) {
 			con_var* crits_enabled = ctx->m_cvar->find_var( "tf_weapon_criticals" );
@@ -82,6 +94,8 @@ void c_visuals::draw_indicators( ) {
 		}
 	} ctx->m_surface->draw_set_alpha( 1.0f );
 }
+
+
 
 void c_visuals::trace_projectile_path( ) {
 	if ( !ctx->m_local_player || !ctx->m_local_player->is_alive( ) || !ctx->m_local_weapon || !config->m_projectile_aim.m_projectile_path_any_angle )

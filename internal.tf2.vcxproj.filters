@@ -93,6 +93,9 @@
     <Filter Include="Source\client\Features\aimbot\hitscan">
       <UniqueIdentifier>{3eb7583d-fa49-4faf-9a61-8d40317c0849}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\client\Features\misc\region_selector">
+      <UniqueIdentifier>{5f250007-604d-4a5b-a82e-9b1ffee60679}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main_thread.cpp">

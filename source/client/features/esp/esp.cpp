@@ -399,7 +399,7 @@ void c_esp::render_worlds( ) {
 				render->outlined_rect( bounding_box.m_x + 1, bounding_box.m_y + 1, bounding_box.m_w - 2, bounding_box.m_h - 2, color( 0, 0, 0, 200 ) );
 			}
 
-			//todo: fix on medic crossbow arrows and test it on other projectiles
+			//todo: fix on medic crossbow arrows and test it on other projectiles,also orginal
 			/*if ( config->m_esp.m_projectile_flags ) {
 				if ( projectile->m_critical( ) ) {
 					render->outlined_text( bounding_box.m_x + bounding_box.m_w + 3, bounding_box.m_y - 2, ALIGN_DEFAULT, ctx->m_small_fonts.m_font, color( 255, 50, 50 ), "CRIT" );
