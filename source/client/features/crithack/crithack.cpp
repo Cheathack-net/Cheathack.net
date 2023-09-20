@@ -5,9 +5,20 @@ void c_crithack::run( c_user_cmd* cmd ) {
 	if ( !ctx->m_local_player || !ctx->m_local_player->is_alive() || !ctx->m_local_weapon || tf2::is_non_aimable(ctx->m_local_weapon))
 		return;
 
-	if ( ctx->m_local_weapon->m_item_definition_index( ) == Pyro_s_GasPasser 
-		 || ctx->m_local_weapon->get_weapon_id( ) == TF_WEAPON_JAR 
-		 || ctx->m_local_weapon->get_weapon_id( ) == TF_WEAPON_JAR_MILK )
+	if ( ctx->m_local_weapon->m_item_definition_index( ) == Pyro_s_GasPasser
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_LUNCHBOX
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_PARACHUTE
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_MEDIGUN
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_SNIPERRIFLE
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_SNIPERRIFLE_CLASSIC
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_SNIPERRIFLE_DECAP
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_COMPOUND_BOW
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_KNIFE
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_PDA_ENGINEER_BUILD
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_JAR 
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_PDA_SPY_BUILD
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_GRAPPLINGHOOK 
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_JAR_MILK )
 		return;
 
 	//run crit indicator here since its related to the crithack now
