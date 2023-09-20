@@ -17,7 +17,10 @@ void c_crithack::run( c_user_cmd* cmd ) {
 		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_PDA_ENGINEER_BUILD
 		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_JAR 
 		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_PDA_SPY_BUILD
-		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_GRAPPLINGHOOK 
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_GRAPPLINGHOOK
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_BUFF_ITEM
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_PDA_ENGINEER_DESTROY
+		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_PDA_SPY
 		 || ctx->m_local_weapon->get_weapon_id() == TF_WEAPON_JAR_MILK )
 		return;
 
