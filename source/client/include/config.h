@@ -204,7 +204,7 @@ public:
 		int m_stencil_scale = 1;
 
 		// --- players ---
-		bool m_player_outlines = true;
+		bool m_player_outlines = false;
 		bool m_player_enemy_only = false;
 		float m_player_alpha = 1.0f;
 
@@ -240,7 +240,7 @@ public:
 		bool m_remove_zoom = true;
 		float m_aspect_ratio = 0.f;
 		float m_prop_alpha = 0.7f;
-		c_key_bind m_thirdperson_key = c_key_bind( 'Z' );
+		c_key_bind m_thirdperson_key = c_key_bind( VK_MBUTTON );
 
 		// --- ragdolls ---
 		bool m_ragdolls_enabled = true;
@@ -273,7 +273,7 @@ public:
 		bool m_chat_player_class_changes = false;
 		bool m_chat_player_name_changes = false;
 		bool m_chat_vote_casts = false;
-		c_key_bind m_scout_jump_key = c_key_bind( 'X' );
+		c_key_bind m_scout_jump_key = c_key_bind( 'C' );
 	} m_misc;
 
 	struct {
@@ -325,17 +325,17 @@ public:
 		bool m_backtrack = false;
 		
 		c_key_bind m_crithack_key = c_key_bind( 'Q' );
-		c_key_bind m_doubletap_recharge_key = c_key_bind( 'R' );
+		c_key_bind m_doubletap_recharge_key = c_key_bind( 'T' );
 		c_key_bind m_tickbase_warp_key = c_key_bind( VK_LSHIFT );
 		c_key_bind m_auto_warp_key = c_key_bind( 'F' );
 	} m_exploits;
 
 	struct {
 		color m_ui_outline = color( 15, 15, 15 );
-		color m_ui_background = color( 30, 30, 30 );
-		color m_ui_foreground = color( 45, 45, 45 );
-		color m_ui_accent = color( 195, 65, 65 );
-		color m_ui_text = color( 255, 255, 255 );
+		color m_ui_background = color( 30, 30, 30 ); //background of entire menu
+		color m_ui_foreground = color( 45, 45, 45 ); //outline of bars and buttons
+		color m_ui_accent = color( 61, 191, 227) ; //lines around the outside of menu areas
+		color m_ui_text = color( 255, 255, 255 ); //text color inside menu
 	} m_colors;
 
 	struct {
