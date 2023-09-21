@@ -11,7 +11,7 @@ void c_crithack::run( c_user_cmd* cmd ) {
 		return;
 
 	//run crit indicator here since its related to the crithack now
-	//run_crit_indicator_calc();
+	run_crit_indicator_calc();
 
 	if (!config->m_exploits.m_crithack)
 		return;

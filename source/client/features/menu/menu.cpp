@@ -327,11 +327,12 @@ bool c_menu::key_bind(std::string label, unsigned short& var) {
 		case VK_MBUTTON: return ("Middle Mouse");
 		case VK_XBUTTON1: return ("Mouse4");
 		case VK_XBUTTON2: return ("Mouse5");
+		case VK_CONTROL: return ("ctrl");
 		case 0x0: return ("None");
 		default: break;
 		}
 
-		CHAR output[16] = { "\0" };
+		CHAR output[17] = { "\0" };
 
 		if (GetKeyNameTextA(MapVirtualKeyA(key, MAPVK_VK_TO_VSC) << 16, output, 16))
 			return output;
