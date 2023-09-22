@@ -24,17 +24,17 @@ public:
 		int m_tick_count;
 
 		inline void copy( ) {
-			//m_cl_frame_time = ctx->m_client_state->m_frame_time;
-			//m_frame_time = ctx->m_globals->m_frame_time;
+			m_cl_frame_time = ctx->m_client_state->m_frame_time;
+			m_frame_time = ctx->m_globals->m_frame_time;
 			m_current_time = ctx->m_globals->m_current_time;
-			//m_tick_count = ctx->m_globals->m_tick_count;
+			m_tick_count = ctx->m_globals->m_tick_count;
 		}
 
 		inline void restore( ) {
-			//ctx->m_client_state->m_frame_time = m_cl_frame_time;
-			//ctx->m_globals->m_frame_time = m_frame_time;
+			ctx->m_client_state->m_frame_time = m_cl_frame_time;
+			ctx->m_globals->m_frame_time = m_frame_time;
 			ctx->m_globals->m_current_time = m_current_time;
-			//ctx->m_globals->m_tick_count = m_tick_count;
+			ctx->m_globals->m_tick_count = m_tick_count;
 		}
 	};
 	globals_backup state = { };

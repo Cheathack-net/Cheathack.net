@@ -300,8 +300,8 @@ void c_visuals::vote_revealer_register_message( int message, bf_read& data ) {
 		bool info = false;
 		info = ctx->m_engine_client->get_player_info( caller, &caller_info ) && ctx->m_engine_client->get_player_info( target, &target_info );
 
-		//ctx->m_cvar->console_printf( "Team: %i  Target: %i  %s\n", team, target, target_info.m_name ); // this is correct
-		//ctx->m_cvar->console_printf( "Team: %i  caller: %i  %s\n", team, caller, caller_info.m_name );
+		ctx->m_cvar->console_printf( "Team: %i  Target: %i  %s\n", team, target, target_info.m_name ); // this is correct
+		ctx->m_cvar->console_printf( "Team: %i  caller: %i  %s\n", team, caller, caller_info.m_name );
 
 		m_vote_caller = caller_info.m_name;
 		m_vote_target = target_info.m_name;
