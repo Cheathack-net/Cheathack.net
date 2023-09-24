@@ -16,7 +16,7 @@ void c_menu::press_sound() {
 
 void c_menu::render_window(std::string label, rect_t size, color background, color edge) {
 	//background
-	//ctx->m_surface->draw_set_alpha( 1.0f );
+	ctx->m_surface->draw_set_alpha( 1.0f );
 	render->filled_rect(size.m_x, size.m_y, size.m_w, size.m_h, background);
 
 	if (config->m_menu.m_skull_background) {
@@ -29,8 +29,8 @@ void c_menu::render_window(std::string label, rect_t size, color background, col
 	render->outlined_rect(size.m_x, size.m_y, size.m_w, size.m_h, edge);
 	render->line(size.m_x, size.m_y + 15, size.m_x + size.m_w, size.m_y + 15, edge);
 	render->line(size.m_x, size.m_y + 35, size.m_x + size.m_w, size.m_y + 35, edge);
-	//ctx->m_surface->draw_set_alpha( m_fade_alpha );
-	//render->outlined_text( size.m_x + size.m_w - 5, size.m_y + 1, ALIGN_RIGHT, ctx->m_tahoma_narrow.m_font, color( 255, 255, 255 ), "Registered to: %s", ctx->m_user_name.c_str( ) );
+	ctx->m_surface->draw_set_alpha( m_fade_alpha );
+	render->outlined_text( size.m_x + size.m_w - 5, size.m_y + 1, ALIGN_RIGHT, ctx->m_tahoma_narrow.m_font, color( 255, 255, 255 ), "Registered to: %s", ctx->m_user_name.c_str( ) );
 }
 
 bool c_menu::menu_tab(std::string label, bool active) {
@@ -108,10 +108,10 @@ void c_menu::menu_group(std::string label) {
 	int w = m_last_group.m_w;
 	int h = m_last_group.m_y - last_group_y;
 
-	/*if ( h > 195 )
+	if ( h > 195 )
 	{
 		h -= ( ( m_last_group.m_y - last_group_y ) - 195 );
-	}*/
+	}
 
 	//draw.line( x, y + custom_y, x + w, y + custom_y, config->m_colors.m_ui_accent );
 	render->outlined_rect(x, y, w, h, config->m_colors.m_ui_accent);
@@ -604,7 +604,7 @@ bool c_menu::combo_box(std::string label, int& var, std::vector< const char* > i
 	m_last_group.m_y = y + h + 10;
 
 	m_combo_info.m_var = curr;
-	//m_combo_info.m_var = prev;
+	m_combo_info.m_var = prev;
 
 	return callback;
 }
@@ -1103,7 +1103,7 @@ void c_menu::dump_server_players()
 }
 
 void c_menu::load_config() {
-	std::ifstream load("figgy.jenga");
+	std::ifstream load("cfg.Cheathack");
 
 	if (load.is_open()) {
 		Json::Value Load;
