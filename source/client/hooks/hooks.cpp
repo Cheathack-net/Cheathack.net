@@ -1021,7 +1021,7 @@ void __fastcall hooks::paint::function(void* ecx, void* edx, paint_mode_t mode) 
 			esp->run();
 			movement_sim->draw_path();
 			projectile_aim->draw_path();
-			//visuals->draw_server_hitboxes( );
+			visuals->draw_server_hitboxes( );
 			visuals->visualize_stickies_path();
 			visuals->draw_indicators();
 			visuals->draw_camera_outline();
