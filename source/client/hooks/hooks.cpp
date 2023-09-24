@@ -697,14 +697,14 @@ void __fastcall hooks::frame_stage_notify::function(void* ecx, void* edx, client
 
 	else if (stage == client_frame_stage_t::FRAME_NET_UPDATE_END) {
 		entity_cache->fill();
-		/*if ( ctx->m_local_player ) {
+		if ( ctx->m_local_player ) {
 			auto diff = std::clamp( TIME_TO_TICKS( ctx->m_local_player->m_simulation_time( ) - ctx->m_local_player->m_old_simulation_time( ) ), 0, 22 );
 			for ( int i = 0; i < diff; i++ ) {
 				ctx->m_update_anims = true;
 				ctx->m_local_player->update_client_side_animations( );
 				ctx->m_update_anims = false;
 			}
-		}*/
+		}
 
 		for (const auto& player : ctx->players) {
 			if (!player)

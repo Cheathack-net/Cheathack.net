@@ -1679,7 +1679,7 @@ void c_menu::run() {
 
 				case SUBTAB_MISC_: {
 					menu_group_start(false, true, true); {
-						combo_box("Bullet Tracers", config->m_visuals.m_bullet_tracers, { "Default", "CAPPER", "Machina", "W-Machina", "Zap", "Zap 2", "Ink" });
+						combo_box("Bullet Tracers", config->m_visuals.m_bullet_tracers, { "Default", "CAPPER", "Machina", "W-Machina", "Zap", "Zap 2", "Ink","ZAPPY"});
 						check_box("MvM Sound Replacement", config->m_visuals.m_mvm_giant_sounds);
 						check_box("Sniper Sightlines", config->m_visuals.m_sniper_sightlines);
 						check_box("Draw Prediction Path", config->m_projectile_aim.m_draw_prediction_path);
