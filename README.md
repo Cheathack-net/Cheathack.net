@@ -8,3 +8,4 @@
 - auto osu player
 - tf2 rce exploit
 - votekick yourself.lua
+- client side server crasher
