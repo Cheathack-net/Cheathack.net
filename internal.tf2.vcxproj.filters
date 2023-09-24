@@ -18,9 +18,6 @@
     <Filter Include="Source\client\Features\aimbot">
       <UniqueIdentifier>{4dcd624f-3fa3-41e5-9f7a-d20e0392707b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\client\Features\HvH">
-      <UniqueIdentifier>{775d7dac-911b-463b-a80b-01c41cb7d5a3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\client\Features\Visuals">
       <UniqueIdentifier>{46988874-033c-4854-a39d-5918ae4f6737}</UniqueIdentifier>
     </Filter>
@@ -32,9 +29,6 @@
     </Filter>
     <Filter Include="Source\client\Features\misc\backtrack">
       <UniqueIdentifier>{221a4ae2-1542-4c7a-9e76-302a78950e7e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\client\Features\misc\cheat_detection">
-      <UniqueIdentifier>{7a61f00f-4321-4ac6-a6bd-80612ae7bd75}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\client\Features\misc\seed_prediction">
       <UniqueIdentifier>{4d05c1d4-d2f5-4334-92e5-7f92358874fa}</UniqueIdentifier>
@@ -95,6 +89,9 @@
     </Filter>
     <Filter Include="Source\client\Features\misc\region_selector">
       <UniqueIdentifier>{5f250007-604d-4a5b-a82e-9b1ffee60679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\client\Features\misc\cheat_detection">
+      <UniqueIdentifier>{7a61f00f-4321-4ac6-a6bd-80612ae7bd75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
