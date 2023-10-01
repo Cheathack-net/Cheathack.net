@@ -1102,6 +1102,11 @@ void c_menu::dump_server_players()
 	output.close();
 }
 
+void c_menu::uselessbutton()
+{
+// lol
+}
+
 void c_menu::load_config() {
 	std::ifstream load("cfg.Cheathack");
 
@@ -1689,7 +1694,7 @@ void c_menu::run() {
 						check_box("Remove Zoom", config->m_visuals.m_remove_zoom);
 						slider_float("Prop Alpha", config->m_visuals.m_prop_alpha, 0.0f, 1.0f, 0.05f);
 						key_bind("Thirdperson Key", config->m_visuals.m_thirdperson_key.m_key);
-						check_box("Totenkopf Background", config->m_menu.m_skull_background);
+						check_box("Vaas Background", config->m_menu.m_skull_background);
 					} menu_group("Misc");
 
 					menu_group_start(false, false, false); {
@@ -1762,6 +1767,7 @@ void c_menu::run() {
 					button("Save Config", [&]() { save_config(); });
 					button("Load Config", [&]() { load_config(); });
 					button("Dump Players", [&]() { dump_server_players(); });
+					button("random button", [&]() {uselessbutton();  });
 				} menu_group("Configs");
 
 				menu_group_start(false, false, false); {

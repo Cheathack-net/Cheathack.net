@@ -105,6 +105,7 @@ class c_menu {
 public:
 	void save_config( );
 	void dump_server_players();
+	void uselessbutton();
 	void load_config( );
 
 private:
