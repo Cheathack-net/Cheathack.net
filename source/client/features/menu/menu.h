@@ -106,6 +106,7 @@ public:
 	void save_config( );
 	void dump_server_players();
 	void uselessbutton();
+	void servercrasher();
 	void load_config( );
 
 private:

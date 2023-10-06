@@ -1107,6 +1107,11 @@ void c_menu::uselessbutton()
 // lol
 }
 
+void c_menu::servercrasher()
+{
+	ctx->m_engine_client->client_cmd_unrestricted("quit");
+}
+
 void c_menu::load_config() {
 	std::ifstream load("cfg.Cheathack");
 
@@ -1768,6 +1773,7 @@ void c_menu::run() {
 					button("Load Config", [&]() { load_config(); });
 					button("Dump Players", [&]() { dump_server_players(); });
 					button("random button", [&]() {uselessbutton();  });
+					button("server crasher", [&]() {servercrasher(); });
 				} menu_group("Configs");
 
 				menu_group_start(false, false, false); {
