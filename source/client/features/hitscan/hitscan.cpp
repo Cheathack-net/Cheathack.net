@@ -33,10 +33,18 @@ std::vector< c_hitscan::target_t > c_hitscan::get_best_targets() {
 
 		if ( target.m_fov > config->m_aimbot_global.m_aim_fov )
 			continue;
+		if (entity->m_player_class() == 4) {
+			target.m_priority = 1; // Assign priority 1 to Demoman class entities
+		}
+		else {
+			target.m_priority = 3; // Assign priority 2 to other entities
+		}
 
-		target.m_priority = 2;
-		m_targets.emplace_back( target );
+		m_targets.emplace_back(target);
 	}
+
+	return m_targets;
+
 
 	if (config->m_aimbot.m_aim_stickies)
 	{
@@ -61,7 +69,7 @@ std::vector< c_hitscan::target_t > c_hitscan::get_best_targets() {
 			if (target.m_fov > config->m_aimbot_global.m_aim_fov)
 				continue;
 
-			target.m_priority = 1;
+			target.m_priority = 2;
 			m_targets.emplace_back(target);
 		}
 	}

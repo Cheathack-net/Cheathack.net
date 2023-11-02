@@ -1809,13 +1809,16 @@ void c_menu::run() {
 				case SUBTAB_ANTIAIM: {
 					menu_group_start(false, true, true); {
 						check_box("Enabled", config->m_hvh.m_pitch.m_enabled);
-						check_box("Jitter", config->m_hvh.m_pitch.m_jitter);
+						check_box("disable in water",config->m_hvh.m_pitch.m_jitter); 
+						check_box("Change states", config->m_hvh.m_pitch.m_jitter);
+						combo_box("pitch", config->m_models.m_world_model_unoccluded, { "None", "Fake up", "Fake down", "Legit","random","custom","half up" });
 						if (config->m_hvh.m_pitch.m_jitter) {
 							slider_int("Jitter Delay", config->m_hvh.m_pitch.m_jitter_max, 10, 250, 1);
 							slider_int("First Angle", config->m_hvh.m_pitch.m_min_angle, -271, 271);
 							slider_int("Second Angle", config->m_hvh.m_pitch.m_max_angle, -271, 271);
+						    slider_int("Angle", config->m_hvh.m_pitch.m_pitch_angle, -271, 271);
 						}
-						else slider_int("Angle", config->m_hvh.m_pitch.m_pitch_angle, -271, 271);
+						
 					} menu_group("Pitch");
 
 					menu_group_start(true, true, true); {
@@ -1860,6 +1863,7 @@ void c_menu::run() {
 					check_box("Fake Latency", config->m_exploits.m_fake_latency);
 					slider_int("Fake Latency Amount", config->m_exploits.m_fake_latency_amount, 0, 800, 10, "%i ms");
 				} menu_group("Backtrack");
+			
 
 #ifndef JW_RELEASE_BUILD
 				menu_group_start(false, false, false); {

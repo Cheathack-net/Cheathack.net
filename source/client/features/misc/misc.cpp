@@ -356,9 +356,13 @@ void c_misc::fast_stop( c_user_cmd* cmd ) {
 
 			cmd->m_forward_move = -negated_direction.m_x;
 			cmd->m_side_move = -negated_direction.m_y;
+
+
 		}
 	}
 }
+
+
 
 void c_misc::taunt_slide( c_base_player* player, c_user_cmd* cmd ) {
 	if ( player->m_player_cond( ) & TFCond_Taunting ) {
